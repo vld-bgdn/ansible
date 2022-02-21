@@ -3,3 +3,13 @@
 192.168.88.102
 192.168.88.103
 192.168.88.104
+
+[bgdnv_winservers]
+windows2012 ansible_host=192.168.88.110
+windows2016 ansible_host=192.168.88.111
+
+[bgdnv_winservers:vars]
+ansible_user = myadmin
+ansible_port = 5986
+ansible_connection = winrm
+ansible_winrm_server_cert_validation = ignore
