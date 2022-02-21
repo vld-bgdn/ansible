@@ -1,0 +1,11 @@
+---
+- name: Install default Apache2
+  hosts: 192.168.88.103
+  become: yes
+
+  tasks:
+  - name: Install Apache2 webserver
+    apt:  name=apache2 state=absent
+
+    # - name: Start Apache2 and enable it on boot
+    #    service: name=apache2 state=started enabled=yes    
